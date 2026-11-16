@@ -71,7 +71,7 @@
 'use strict';
 const $=s=>document.querySelector(s), money=n=>'NT$ '+n.toLocaleString('zh-TW');
 // 訂單 API：填入 Google Apps Script 網頁應用程式網址（…/exec）即啟用真實下單；留空則維持模擬結帳
-const ORDER_API='';
+const ORDER_API='https://script.google.com/macros/s/AKfycbxMo_NwetGLe1cJPYCUrI5Ff-3RPp-3nLB4Ekfx92oVym3wS9eRVJRWcE6OxdvAGsWg/exec';
 let orderRequestId='',submitting=false;
 const photo=(id,w=900)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
 const products=[
