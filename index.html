@@ -1,7 +1,15 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f1e8">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#37271e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="煎好日">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#f7f1e8">
 <title>煎好日｜金黃鍋貼・日常好味</title>
 <meta name="description" content="煎好日鍋貼專賣：每日現包、現點現煎。探索招牌鍋貼、水餃與冷凍禮盒。">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -203,5 +211,7 @@ if('ResizeObserver' in window)new ResizeObserver(()=>{fit();if(!raf)renderer.ren
 scene3.appendChild(cv);frame(performance.now());scene3.classList.add('is-3d');go3d();
 }
 })();
+
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(e=>console.warn('SW',e)));
 </script>
 </body></html>
